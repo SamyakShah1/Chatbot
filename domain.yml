@@ -1,0 +1,54 @@
+version: "3.1"
+
+intents:
+  - greet
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+  - goodbye
+  - ask_company_info
+  - ask_company_revenue
+  - ask_company_headquarters
+  - ask_company_employees
+  - ask_company_rank
+  - ask_company_growth
+responses:
+  utter_greet:
+    - text: "Hey there! How can I help you today?"
+
+  utter_happy:
+    - text: "That's great to hear!"
+
+  utter_cheer_up:
+    - text: "I'm sorry to hear that. Here's something to cheer you up: 🌈"
+
+  utter_did_that_help:
+    - text: "Did that help you feel better?"
+
+  utter_goodbye:
+    - text: "Goodbye! Take care 😊"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_company_not_found:
+    - text: "Sorry, I couldn't find any information about that company."
+
+actions:
+  - action_company_revenue
+  - action_company_industry
+  - action_company_headquarters
+  - action_company_employees
+  - action_company_growth
+  - action_company_info
+
+slots:
+  company:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: company
+
+entities:
+  - company

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Company Info Chatbot</title>
+  </head>
+  <body>
+    <h1>Welcome to Company Info Chatbot</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.min.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        WebChat.default(
+          {
+            initPayload: "/greet",
+            customData: { language: "en" },
+            socketUrl: "http://localhost:5005",
+            socketPath: "/socket.io/",
+            title: "Company Info Bot",
+            showFullScreenButton: true,
+          },
+          null
+        );
+      });
+    </script>
+  </body>
+</html>

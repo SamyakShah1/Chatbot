@@ -1,0 +1,30 @@
+# Ignore virtual environment
+chatbot-env/
+
+# Ignore Rasa folder
+.rasa/
+
+# Ignore models folder (generated models)
+models/
+
+# Ignore data folder (raw data or large datasets)
+data/
+
+# Ignore sensitive credentials file
+credentials.yml
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore config files with sensitive information or environment-specific data
+config.yml
+domain.yml
+endpoints.yml
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+*.env
